@@ -1,43 +1,219 @@
-<form>
-<label>Full Name:</label>
-<input type="text">
-<br><br>
-<label>Password:</label>
-<input type="password">
-<br><br>
-<label>Gender:</label>
-<input type="radio" name="gender">
-Male
-<input type="radio" name="gender">
-Female
-<br><br>
-<label>Skills:</label>
-<input type="checkbox">
-HTML
-<input type="checkbox">
-CSS
-<input type="checkbox">
-JavaScript
-<br><br>
-<label>Strand:</label>
-<select>
-<option>ICT</option>
-<option>STEM</option>
-Building a Complete Form
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
 
-Back Next
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: white;
+        }
 
-TERM 1
-1.7 HTML Forms
+        nav {
+            background-color: #ddd;
+            padding: 10px;
+        }
 
-Preview
+        nav a {
+            color: blue;
+            margin-right: 5px;
+        }
 
-<option>ABM</option>
-</select>
-<br><br>
-<label>Comments:</label>
-<textarea rows="5" cols="30"></textarea>
-<br><br>
-<input type="submit">
-<input type="reset">
-</form>
+        main {
+            padding: 10px;
+        }
+
+        h1 {
+            font-size: 28px;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea {
+            margin-top: 5px;
+        }
+
+        textarea {
+            width: 145px;
+            height: 70px;
+        }
+
+        .radio-group,
+        .checkbox-group {
+            margin-top: 5px;
+        }
+
+        .radio-group label,
+        .checkbox-group label {
+            margin-top: 5px;
+        }
+
+        button {
+            margin-top: 15px;
+        }
+
+        hr {
+            margin-top: 15px;
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        footer {
+            font-weight: bold;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#">Home</a> |
+        <a href="#">About Me</a> |
+        <a href="#">Hobbies</a> |
+        <a href="#">Favorites</a> |
+        <a href="#">Goals</a> |
+        <a href="#">Contact Me</a>
+    </nav>
+
+    <main>
+
+        <h1>Contact Me!</h1>
+
+        <p>You can use the contact form below to send me a message.</p>
+
+        <form>
+
+            <!-- Full Name -->
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname">
+
+            <!-- Email -->
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email">
+
+            <!-- Gender -->
+            <label>Gender:</label>
+            <div class="radio-group">
+                <input type="radio" id="male" name="gender" value="Male">
+                <label for="male">Male</label>
+
+                <input type="radio" id="female" name="gender" value="Female">
+                <label for="female">Female</label>
+            </div>
+
+            <!-- Interests -->
+            <label>Interests:</label>
+            <div class="checkbox-group">
+                <input type="checkbox" id="sports" name="interest" value="Sports">
+                <label for="sports">Sports</label>
+
+                <input type="checkbox" id="music" name="interest" value="Music">
+                <label for="music">Music</label>
+
+                <input type="checkbox" id="travel" name="interest" value="Travel">
+                <label for="travel">Travel</label>
+
+                <input type="checkbox" id="reading" name="interest" value="Reading">
+                <label for="reading">Reading</label>
+
+                <input type="checkbox" id="gaming" name="interest" value="Gaming">
+                <label for="gaming">Gaming</label>
+
+                <input type="checkbox" id="other" name="interest" value="Other">
+                <label for="other">Other</label>
+            </div>
+
+            <!-- Strand -->
+            <label for="strand">Strand:</label>
+            <select id="strand" name="strand">
+                <option value="">Select a strand</option>
+                <option value="STEM">STEM</option>
+                <option value="ABM">ABM</option>
+                <option value="HUMSS">HUMSS</option>
+                <option value="TVL">TVL</option>
+                <option value="GAS">GAS</option>
+            </select>
+
+            <!-- Purpose -->
+            <label for="purpose">Purpose of Message:</label>
+            <select id="purpose" name="purpose">
+                <option value="">-- Select Purpose --</option>
+                <option value="Question">Question</option>
+                <option value="Feedback">Feedback</option>
+                <option value="Suggestion">Suggestion</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <!-- Message -->
+            <label for="message">Message:</label>
+            <textarea id="message" name="message"></textarea>
+
+            <br>
+
+            <!-- Buttons -->
+            <button type="submit">Send Message</button>
+            <button type="reset">Reset</button>
+
+            <!-- Updates -->
+            <p>
+                <input type="checkbox" id="updates" name="updates">
+                <label for="updates">I would like to receive updates.</label>
+            </p>
+
+            <!-- Preferred Contact -->
+            <label>Preferred way to contact you:</label>
+            <div class="radio-group">
+                <input type="radio" id="contactEmail" name="contact" value="Email">
+                <label for="contactEmail">Email</label>
+
+                <input type="radio" id="contactPhone" name="contact" value="Phone">
+                <label for="contactPhone">Phone</label>
+            </div>
+
+        </form>
+
+        <hr>
+
+        <!-- Website Rating -->
+        <h2>How would you rate my website?</h2>
+
+        <div class="rating">
+            <span>Your Rating:</span>
+
+            <input
+                type="range"
+                id="rating"
+                min="0"
+                max="100"
+                value="50"
+                oninput="ratingValue.innerHTML = this.value + '% ❤️'"
+            >
+
+            <span>Your rating: <b id="ratingValue">50% ❤️</b></span>
+        </div>
+
+        <hr>
+
+        <footer>
+            Thank you for visiting my contact page. Take care!
+        </footer>
+
+    </main>
+
+</body>
+</html>
