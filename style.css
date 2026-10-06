@@ -1,58 +1,152 @@
-/* ELEMENT SELECTORS */
+/* My Personal Website - style.css */
+
+* {
+    box-sizing: border-box;
+}
 
 body {
-    color: black;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+header p {
+    margin: 8px 0 0;
+}
+
+nav {
+    background-color: #555;
+    text-align: center;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ffd700;
+}
+
+main {
+    width: 80%;
+    max-width: 1000px;
+    margin: 30px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
 }
 
 h1 {
-    text-align: center;
+    color: white;
 }
 
 h2 {
-    color: navy;
+    color: #333;
 }
 
-
-/* CLASS SELECTORS */
-
-.profile-info {
-    background-color: lightgray;
+h3 {
+    color: #555;
 }
 
-.nav-link {
-    color: blue;
-    font-weight: bold;
+p {
+    font-size: 17px;
 }
 
-.section-title {
-    font-weight: bold;
+img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+    margin: 15px auto;
 }
 
-.form-label {
-    font-weight: bold;
+video {
+    width: 100%;
+    max-width: 650px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
 }
 
-.form-input {
-    color: blue;
+audio {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 20px auto;
 }
 
-.btn {
-    font-weight: bold;
-}
-
-.primary {
+button {
+    background-color: #333;
     color: white;
-    background-color: green;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
 }
 
+button:hover {
+    background-color: #777;
+}
 
-/* ID SELECTORS */
+form {
+    max-width: 600px;
+    margin: auto;
+}
 
-#main-header {
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+footer {
+    background-color: #333;
+    color: white;
     text-align: center;
-    background-color: lightgray;
+    padding: 20px;
+    margin-top: 30px;
 }
 
-#contact-section {
-    background-color: lightgray;
+/* Mobile-friendly layout */
+@media (max-width: 600px) {
+    main {
+        width: 95%;
+        padding: 20px;
+    }
+
+    nav a {
+        display: block;
+        margin: 8px 0;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
 }
