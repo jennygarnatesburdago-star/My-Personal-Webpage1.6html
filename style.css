@@ -1,0 +1,58 @@
+/* ELEMENT SELECTORS */
+
+body {
+    color: black;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    color: navy;
+}
+
+
+/* CLASS SELECTORS */
+
+.profile-info {
+    background-color: lightgray;
+}
+
+.nav-link {
+    color: blue;
+    font-weight: bold;
+}
+
+.section-title {
+    font-weight: bold;
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+.form-input {
+    color: blue;
+}
+
+.btn {
+    font-weight: bold;
+}
+
+.primary {
+    color: white;
+    background-color: green;
+}
+
+
+/* ID SELECTORS */
+
+#main-header {
+    text-align: center;
+    background-color: lightgray;
+}
+
+#contact-section {
+    background-color: lightgray;
+}
