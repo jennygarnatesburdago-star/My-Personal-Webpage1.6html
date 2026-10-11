@@ -1,4 +1,13 @@
 /* My Personal Website - style.css */
+ 
+<nav>
+    <a class="nav-link" href="index.html">Home</a> |
+    <a class="nav-link" href="about.html">About Me</a> |
+    <a class="nav-link" href="hobbies.html">Hobbies</a> |
+    <a class="nav-link" href="favorites.html">Favorites</a> |
+    <a class="nav-link" href="goals.html">Goals</a> |
+    <a class="nav-link" href="contact.html">Contact Me</a> |
+</nav>
 
 * {
     box-sizing: border-box;
